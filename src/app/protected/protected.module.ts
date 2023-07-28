@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MaterialModule } from '../shared/material.module';
 import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
+import { VidegamesModule } from './pages/videgames.module';
 
 
 @NgModule({

@@ -1,0 +1,32 @@
+<h2 mat-dialog-title> {{ estadoFormulario }} nuevo Producto </h2>
+
+<mat-dialog-content>
+    <form [formGroup]="gameForm">
+        <div class="game-container">
+            <mat-form-field>
+                <input matInput placeholder="Nombre del juego" formControlName="name" required/>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput type="number" placeholder="Año" formControlName="year" required />
+            </mat-form-field>
+            
+            <mat-form-field>
+                <input matInput #message maxlength="256" placeholder="Descripcion del juego...">
+                <mat-hint align="start">{{message.value.length}} / 256</mat-hint>
+            </mat-form-field>
+        </div>
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+
+    <button mat-button color="primary" (click)="onSave()" [disabled]="gameForm.invalid">
+        <mat-icon>save</mat-icon> Guardar
+    </button>
+
+    <button mat-button color="primary" (click)="onCancel()">
+        <mat-icon>cancel</mat-icon> Cancelar
+    </button>
+
+</mat-dialog-actions>

@@ -4,12 +4,14 @@ import { VidegamesComponent } from './videgames/videgames.component';
 import { MaterialModule } from 'src/app/shared/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NewGameComponent } from './new-game/new-game.component';
 
 
 
 @NgModule({
   declarations: [
-    VidegamesComponent
+    VidegamesComponent,
+    NewGameComponent
   ],
   imports: [
     CommonModule,
